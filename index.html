@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Notification System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>Job Portal</h2>
+    <div class="bell">
+        🔔 <span id="unreadCount">0</span>
+    </div>
+</header>
+
+<section class="preferences">
+    <h3>Notification Preferences</h3>
+    <label><input type="checkbox" id="inapp" checked> In-App</label>
+    <label><input type="checkbox" id="email"> Email</label>
+    <label><input type="checkbox" id="push"> Push</label>
+</section>
+
+<section class="controls">
+    <button onclick="sendNotification('JOB_MATCH','HIGH')">New Job Match</button>
+    <button onclick="sendNotification('APPLICATION_STATUS','MEDIUM')">Application Update</button>
+    <button onclick="sendNotification('INTERVIEW_REMINDER','HIGH')">Interview Reminder</button>
+</section>
+
+<section id="notificationList" class="notification-container">
+    <!-- Notifications -->
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
